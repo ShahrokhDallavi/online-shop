@@ -1,5 +1,8 @@
-import './App.css';
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+
+// Importing slick-carousel styles
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // components
 import Loading from './components/Loading';
