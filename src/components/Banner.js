@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 
 // Images
 import Clothingbanner from "../assets/Clothingbanner.jpg"
-import Electronicsbanner from "../assets/Electronicsbanner.png"
+import Electronicsbanner from "../assets/Electronicsbanner.jpg"
 import jewelbanner from "../assets/jewelbanner.jpg"
-import timer from "../assets/timer.png"
-import post from "../assets/post.png"
+import timer from "../assets/timer.jpg"
+import post from "../assets/post.jpg"
 
 const Banner = () => {
 

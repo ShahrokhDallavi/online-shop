@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Image
-import login from "../../assets/login.png"
+import login from "../../assets/login.jpg"
 import loginLogo from "../../assets/loginLogo.svg"
 
 const loginBnner = () => {

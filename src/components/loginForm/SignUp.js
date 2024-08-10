@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // Image
-import login from '../../assets/login.png'
+import login from '../../assets/login.jpg'
 
 // React toastify
 import { ToastContainer } from 'react-toastify';
