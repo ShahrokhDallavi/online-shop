@@ -62,12 +62,12 @@ const Login = () => {
                     <h2 className='text-2xl font-bold mb-8'>Log In</h2>
                     <div className='flex flex-col mb-8'>
                         <label className='text-sm mb-2'>Email</label>
-                        <input type='text' name='email' placeholder='Email address' value={data.email} onChange={changeHandler} onFocus={focusHandler} className='w-64 bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
+                        <input type='text' name='email' placeholder='Email address' value={data.email} onChange={changeHandler} onFocus={focusHandler} className='w-full bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
                         {errors.email && touched.email && <span className='text-sm text-error px-1 mt-1'>{errors.email}</span>}
                     </div>
                     <div className='flex flex-col mb-8'>
                         <label className='text-sm mb-2'>Password</label>
-                        <input type={visiblePass ? "text" : "password"} name='password' placeholder='8 characters or more' value={data.password} onChange={changeHandler} onFocus={focusHandler} className='w-64 bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
+                        <input type={visiblePass ? "text" : "password"} name='password' placeholder='8 characters or more' value={data.password} onChange={changeHandler} onFocus={focusHandler} className='w-full bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
                         <div className='absolute mt-10 right-12' onClick={() => setVisiblePass(!visiblePass)}>
                             {
                                 visiblePass ?

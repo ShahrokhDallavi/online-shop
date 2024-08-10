@@ -69,17 +69,17 @@ const SignUp = () => {
                     <h2 className='text-2xl font-bold mb-8'>Sign Up</h2>
                     <div className='flex flex-col mb-8'>
                         <label className='text-sm mb-2'>Name</label>
-                        <input type='text' name='name' placeholder='Full Name' value={data.name} onChange={changeHandler} onFocus={focusHandler} className='w-64 bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
+                        <input type='text' name='name' placeholder='Full Name' value={data.name} onChange={changeHandler} onFocus={focusHandler} className='w-full bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
                         {errors.name && touched.name && <span className='text-sm text-error px-1 mt-1'>{errors.name}</span>}
                     </div>
                     <div className='flex flex-col mb-8'>
                         <label className='text-sm mb-2'>Email</label>
-                        <input type='text' name='email' placeholder='Email address' value={data.email} onChange={changeHandler} onFocus={focusHandler} className='w-64 bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
+                        <input type='text' name='email' placeholder='Email address' value={data.email} onChange={changeHandler} onFocus={focusHandler} className='w-full bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
                         {errors.email && touched.email && <span className='text-sm text-error px-1 mt-1'>{errors.email}</span>}
                     </div>
                     <div className='flex flex-col mb-8'>
                         <label className='text-sm mb-2'>Password</label>
-                        <input type={visiblePass ? "text" : "password"} name='password' placeholder='8 characters or more' value={data.password} onChange={changeHandler} onFocus={focusHandler} className='w-64 bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
+                        <input type={visiblePass ? "text" : "password"} name='password' placeholder='8 characters or more' value={data.password} onChange={changeHandler} onFocus={focusHandler} className='w-full bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
                         <div className='absolute mt-10 right-12' onClick={() => setVisiblePass(!visiblePass)}>
                             {
                                 visiblePass ?
@@ -95,7 +95,7 @@ const SignUp = () => {
                     </div>
                     <div className='flex flex-col mb-8'>
                         <label className='text-sm mb-2'>Confirm Password</label>
-                        <input type={visibleConf ? "text" : "password"} name='confirmPassword' placeholder='Confirm Password' value={data.confirmPassword} onChange={changeHandler} onFocus={focusHandler} className='w-64 bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
+                        <input type={visibleConf ? "text" : "password"} name='confirmPassword' placeholder='Confirm Password' value={data.confirmPassword} onChange={changeHandler} onFocus={focusHandler} className='w-full bg-white rounded-2xl border border-borderColor focus:ring-2 focus:ring-error outline-none py-1 px-3 leading-8' />
                         <div className='absolute mt-10 right-12' onClick={() => setVisibleConf(!visibleConf)}>
                             {
                                 visibleConf ?
