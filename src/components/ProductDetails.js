@@ -72,7 +72,7 @@ const ProductDetails = () => {
             <div className='w-full h-80'>
                 <img src={image} alt="product" className="w-full h-64 px-5" />
             </div>
-            <div className="border-t-2 border-borderColor rounded-t-3xl px-5">
+            <div className="container border-t-2 border-borderColor rounded-t-3xl">
                 <h1 className="pt-4 text-xl">{title}</h1>
                 <h2 className="text-primaryColor text-sm tracking-wider mt-2 mb-4">category: {category}</h2>
                 <p className='pb-2 text-lg tracking-widest '>Description</p>
@@ -101,9 +101,9 @@ const ProductDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center pb-24">
+                <div className="flex items-center pb-5">
                     <span className="text-2xl"><sup className='text-sm'>$ </sup>{price}</span>
-                    <button className="flex ml-auto text-white bg-primaryColor py-2 px-6 rounded-2xl font-medium"><Link to="/products">Back to shop </Link></button>
+                    <button className="flex ml-auto text-white bg-secondaryColor py-2 px-6 rounded-xl font-medium"><Link to="/products">Back to shop </Link></button>
                 </div>
             </div>
         </div>

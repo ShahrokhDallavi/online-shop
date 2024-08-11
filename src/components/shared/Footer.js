@@ -6,7 +6,7 @@ import logoWebsite from '../../assets/LOGO.svg'
 
 const Footer = () => {
     return (
-        <div className="border-t border-borderColor mt-8 text-black px-4">
+        <div className="container border-t border-borderColor mt-8 text-black">
             <div className="flex flex-col items-center text-center my-6">
                 <Link to="/products"><img src={logoWebsite} alt="logoWebsite" /></Link>
                 <p className="text-sm pt-4">Discover Your Style: Shop Smarter, Live Better!</p>

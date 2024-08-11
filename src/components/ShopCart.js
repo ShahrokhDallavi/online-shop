@@ -16,12 +16,12 @@ const ShopCart = () => {
     const {state, dispatch} = useContext(CartContext);
 
     return (
-        <>
+        <div className='min-h-screen pb-64'>
             <ScrollToTop />
             <div className='mx-4 pt-2'>
                 {state.selectedItems.map(item => <Cart key={item.id} data={item} />)}
             </div>
-            <div className="flex flex-col justify-center items-center px-4 h-screen w-full">
+            <div className="container flex flex-col justify-center items-center w-full">
                 {
                     state.itemsCounter > 0 && <div className="fixed bottom-0 rounded-xl w-full bg-white/25 backdrop-blur pt-4 border-t-2 border-white/50 max-w-[600px] pb-24">
                         <p className='font-bold text-lg px-5 pb-2 tracking-wider'>Price Details</p>
@@ -31,14 +31,14 @@ const ShopCart = () => {
                         <p className="text-md tracking-wider px-5">Total Items: <span className="text-primaryColor font-bold">{state.itemsCounter}</span></p>
                         <p className="text-md tracking-wider px-5">Total Payments: <span className="text-primaryColor font-bold"><sup classNameName='text-sm'>$</sup>{state.total}</span></p>
                         <div className="flex justify-between text-white mt-4 px-5">
-                            <button onClick={() => dispatch({type: "CHECKOUT"})} className="bg-primaryColor rounded-full px-16 py-2 shadow-xl">Check out</button>
+                            <button onClick={() => dispatch({type: "CHECKOUT"})} className="bg-primaryColor rounded-full px-16 md:px-44 py-2 shadow-xl">Check out</button>
                             <button onClick={() => dispatch({type: "CLEAR"})} className="bg-secondaryColor rounded-full px-8 py-2">Clear</button>
                         </div>
                     </div>
                 }
 
                 {
-                    state.checkout && <div className="flex flex-col items-center text-center px-4">
+                    state.checkout && <div className="flex flex-col items-center text-center px-4 pt-44">
                         <div className="relative w-10 h-10 mb-8">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-check opacity-75"></span>
                             <span className="relative inline-flex items-center justify-center rounded-full h-10 w-10 bg-check ">
@@ -56,7 +56,7 @@ const ShopCart = () => {
                 }
 
                 {
-                    !state.checkout && state.itemsCounter === 0  && <div className="flex flex-col items-center text-center px-4">
+                    !state.checkout && state.itemsCounter === 0  && <div className="flex flex-col items-center text-center px-4 pt-32">
                         <img src={emptycart} alt='emptycart'className="w-64" />
                         <h5 className="text-lg font-bold mb-4">empty cart!</h5>
                         <h3 className="text-sm mb-8">You can return to the main page to see more products.</h3>
@@ -71,7 +71,7 @@ const ShopCart = () => {
                     </div>
                 }
             </div>
-        </>
+        </div>
     );
 };
 

@@ -28,7 +28,7 @@ const Offers = () => {
     const seconds = timeLeft % 60;
 
     return (
-        <div className='px-20 mt-48'>
+        <div className='container mt-48'>
             <div className='flex bg-primaryColor w-full rounded-2xl'>
                 <div className='flex flex-col justify-center items-center py-8 pr-8'>
                     <img src={Amazings} alt='Amazings text' className='w-20'/>

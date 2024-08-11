@@ -54,7 +54,7 @@ const Banner = () => {
     };
 
     return (
-        <div className='mt-4 pb-8 px-4 grid grid-cols-2 lg:grid-cols-3 grid-rows-2 lg:grid-rows-2 gap-2'>
+        <div className='container mt-4 pb-8 grid grid-cols-2 lg:grid-cols-3 grid-rows-2 lg:grid-rows-2 gap-2'>
             <div className='col-span-2 row-span-2 relative'  onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <Slider {...settings} ref={sliderRef}>
                 <img src={Clothingbanner} alt="Clothingbanner" title='Best New Collection Clothing For Mans and Womans' className='rounded-lg'/>

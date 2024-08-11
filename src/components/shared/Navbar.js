@@ -15,7 +15,7 @@ const Navbar = () => {
     const getIconColor = (paths) => paths.includes(location.pathname) ? '#FF5B00' : '#CBCBCB';
 
     return (
-        <div className="fixed z-50 bottom-4 w-full px-4 max-w-[600px]">
+        <div className="container fixed z-50 bottom-4 w-full max-w-[600px]">
             <div className='flex justify-around items-center py-3 bg-black/80 backdrop-blur-xl rounded-full'>
                 <Link to="/products" className='inline-flex flex-col items-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">

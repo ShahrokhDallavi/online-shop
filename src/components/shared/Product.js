@@ -6,16 +6,34 @@ import { shorten, isInCart, quantityCount} from '../../helper/function';
 
 // Context
 import { CartContext } from '../../context/CartContextProvider';
+import { FavoritesContext } from '../../context/FavoriteContextProvider';
 
 const Product = ({productData}) => {
 
     const {state, dispatch} = useContext(CartContext);
+    const { addFavorite, removeFavorite,favorites } = useContext(FavoritesContext);
+    const isFavorite = favorites.some(item => item.id === productData.id);
+
+    const handleAddFavorite = () => {
+        if (isFavorite) {
+            removeFavorite(productData);
+        } else {
+            addFavorite(productData);
+        }
+    }
 
     return (
         <div className="bg-white rounded-lg m-2 p-3 shadow-lg text-xs">
-            <Link to={`/products/${productData.id}`}>
-                <img src={productData.image} alt='product' className="w-36 h-24" />
-            </Link>
+            <div className='relative'>
+                <Link to={`/products/${productData.id}`}>
+                    <img src={productData.image} alt='product' className="w-36 h-24 mt-6" />
+                </Link>
+                <div className={`inline-flex items-center justify-center rounded-full w-6 h-6 cursor-pointer absolute bottom-24 right-1 ${isFavorite ? 'bg-error' : 'bg-gray'}`} onClick={handleAddFavorite}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" className='p-1'>
+	                    <path fill="white" d="M2 9.137C2 14 6.02 16.591 8.962 18.911C10 19.729 11 20.5 12 20.5s2-.77 3.038-1.59C17.981 16.592 22 14 22 9.138c0-4.863-5.5-8.312-10-3.636C7.5.825 2 4.274 2 9.137" />
+                    </svg>
+                </div>
+            </div>
             <h3 className="font-bold  mt-8">{shorten(productData.title)}</h3>
             <p className="font-light ">{productData.category}</p>
             <p className="my-4 font-semibold text-sm"><sup>$</sup> {productData.price}</p>

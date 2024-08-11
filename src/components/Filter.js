@@ -18,7 +18,7 @@ function Filter({ setCategory }) {
     };
 
     return (
-        <div className="slider-container font-bold px-5 mb-6 text-sm">
+        <div className="container slider-container font-bold mb-6 text-sm">
             <Slider {...settings}>
                 <button onClick={() => handleClick("All")} className={activeButton === "All" ? "text-secondaryColor font-black" : "text-black/50"}>All Product</button>
                 <button onClick={() => handleClick("men's clothing")} className={activeButton === "men's clothing" ? "text-secondaryColor font-black" : "text-black/50"}>Men</button>

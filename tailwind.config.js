@@ -6,10 +6,19 @@ module.exports = {
   theme: {
     extend: {
       container: {
-        padding: '2rem',
+        padding: '1rem',
       },
       fontFamily: {
         'DM Sans': 'DM Sans',
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+        },
       },
     },
     colors: {
@@ -24,7 +33,6 @@ module.exports = {
       'error': '#BA0A08',
       'check': '#00D295',
     },
-    extend: {},
   },
   plugins: [],
 }

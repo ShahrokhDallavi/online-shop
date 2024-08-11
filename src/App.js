@@ -21,12 +21,16 @@ import FavoritesContextProvider from './context/FavoriteContextProvider';
 function App() {
 
   const location = useLocation();
+  const noNavdarPaths = ['/loading', '/products/:id'];
+  const showNavbar = !noNavdarPaths.some(path =>
+    location.pathname === path || (path.includes(':id') && location.pathname.startsWith('/products/'))
+  );
 
   return (
     <FavoritesContextProvider>
       <ProductContextProvider>
           <CartContextProvider>
-            {location.pathname !== "/loading" && <Navbar />}
+            {showNavbar && <Navbar />}
               <Switch>
                 <Route path="/loading" component={Loading} />
                 <Redirect exact from="/" to="/loading" />

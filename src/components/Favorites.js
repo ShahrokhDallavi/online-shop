@@ -14,8 +14,8 @@ const Favorites = () => {
     };
 
     return (
-        <div className="flex flex-col justify-start h-screen">
-            <div className="px-4 pt-2">
+        <div className="flex flex-col justify-start min-h-screen pb-24">
+            <div className="container pt-2">
                 {favorites.length === 0 ? (
                     <div className='flex flex-col items-center text-center mt-48'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10em" height="10em" viewBox="0 0 24 24" className='opacity-25'>
