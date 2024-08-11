@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 // Components
 import Cart from './shared/Cart';
+
+// helper
 import ScrollToTop from '../helper/ScrollToTop';
 
 // Context

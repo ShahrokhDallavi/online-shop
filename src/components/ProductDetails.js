@@ -69,7 +69,7 @@ const ProductDetails = () => {
                 </svg>
             </div>
             {message && <Modal message={message} onClose={handeleCloseModal} />}
-            <div className='w-full h-80'>
+            <div className='pb-8'>
                 <img src={image} alt="product" className="w-full h-64 px-5" />
             </div>
             <div className="container border-t-2 border-borderColor rounded-t-3xl">

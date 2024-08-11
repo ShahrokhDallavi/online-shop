@@ -5,6 +5,8 @@ import { FavoritesContext } from '../context/FavoriteContextProvider';
 
 // helper
 import { shorten } from '../helper/function';
+import ScrollToTop from '../helper/ScrollToTop';
+
 
 const Favorites = () => {
     const { favorites, removeFavorite } = useContext(FavoritesContext);
@@ -15,6 +17,7 @@ const Favorites = () => {
 
     return (
         <div className="flex flex-col justify-start min-h-screen pb-24">
+            <ScrollToTop />
             <div className="container pt-2">
                 {favorites.length === 0 ? (
                     <div className='flex flex-col items-center text-center mt-48'>
